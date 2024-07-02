@@ -1,17 +1,18 @@
-import * as S from "./styles";
-import * as M from "@mui/material";
+import {
+  CardTitle,
+  ContainerPrincipal,
+  ContainerWithIMGbg,
+  Wrapper,
+} from "./styles";
 
 export const Login = () => {
   return (
-    <>
-      <S.Wrapper>
-        <M.Box>
-          <M.Typography variant="h1">Teste de style com MUI</M.Typography>
-        </M.Box>
-      </S.Wrapper>
-      <M.Box>
-        <M.Typography>IMG BG</M.Typography>
-      </M.Box>
-    </>
+    <Wrapper>
+      <ContainerPrincipal>
+        <CardTitle>Teste</CardTitle>
+      </ContainerPrincipal>
+
+      <ContainerWithIMGbg />
+    </Wrapper>
   );
 };
