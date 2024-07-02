@@ -1,4 +1,6 @@
 import {
+  CardBody,
+  CardBodyTitle,
   CardTitle,
   ContainerPrincipal,
   ContainerWithIMGbg,
@@ -9,7 +11,11 @@ export const Login = () => {
   return (
     <Wrapper>
       <ContainerPrincipal>
-        <CardTitle>Teste</CardTitle>
+        <CardTitle>FOCUS ANALYTICS</CardTitle>
+
+        <CardBody>
+          <CardBodyTitle>FAÇA SEU LOGIN</CardBodyTitle>
+        </CardBody>
       </ContainerPrincipal>
 
       <ContainerWithIMGbg />
