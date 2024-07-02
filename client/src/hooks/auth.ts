@@ -12,7 +12,9 @@ const LOCAL_STORAGE_KEY = import.meta.env.VITE_LOCAL_STORAGE_AUTH_KEY;
 export const useAuth = () => {
   const dispatch = useAppDispatch();
 
-  //Função para autenticar usuário
+  /**
+   * Função para autenticar usuário
+   */
   const authenticate = (user: User, authToken: string) => {
     dispatch(setUser(user));
     dispatch(setAuthToken(authToken));
@@ -21,7 +23,9 @@ export const useAuth = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, authToken);
   };
 
-  //Função para pegar o token do local storage
+  /**
+   * Função para pegar o token do local storage
+   */
   const handleGetToken = () => localStorage.getItem(LOCAL_STORAGE_KEY);
 
   //Função para pegar o usuário usando o authToken salvo no local storage
@@ -38,7 +42,9 @@ export const useAuth = () => {
     authenticate(data.user, authToken);
   };
 
-  //Função para login
+  /**
+   * Função para efetuar login
+   */
   const handleLogin = async ({
     user,
     password,
@@ -57,7 +63,9 @@ export const useAuth = () => {
     dispatch(setAuthStatus("not_authenticated"));
   };
 
-  //Função para logout
+  /**
+   * Função para efetuar logout
+   */
   const handleLogout = () => {
     dispatch(setUser(null));
     dispatch(setAuthToken(null));
