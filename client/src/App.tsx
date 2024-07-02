@@ -18,9 +18,9 @@ const App = () => {
   }, [handleAuthenticateUser, handleInitiTheme]);
 
   return (
-    <ThemeProvider
-      theme={theme === "light" ? lightTheme : darkTheme}
-    ></ThemeProvider>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      Minha aplicação
+    </ThemeProvider>
   );
 };
 
